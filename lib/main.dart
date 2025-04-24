@@ -15,9 +15,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'WhatsApp',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Color(0xFF00A884)),
-        useMaterial3: false,
-      ),
+          colorScheme: ColorScheme.fromSeed(seedColor: Color(0xFF00A884)),
+          useMaterial3: false,
+          fontFamily: "Regular"),
       home: SplashScreen(),
     );
   }
