@@ -1,6 +1,7 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
+import 'package:flutter_app/screens/Profile/profilescreen.dart';
 import 'package:flutter_app/widgets/uihelper.dart';
 
 class OtpScreen extends StatelessWidget {
@@ -95,8 +96,12 @@ class OtpScreen extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton:
-          Uihelper.customButton(callback: () {}, buttonname: "Next"),
+      floatingActionButton: Uihelper.customButton(
+          callback: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => ProfileScreen()));
+          },
+          buttonname: "Next"),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
