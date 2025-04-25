@@ -1,6 +1,7 @@
-// ignore_for_file: camel_case_types
+// ignore_for_file: camel_case_types, must_be_immutable
 
 import 'package:flutter/material.dart';
+import 'package:flutter_app/screens/Home/Contact/contactscreen.dart';
 import 'package:flutter_app/widgets/uihelper.dart';
 
 class chatsScreen extends StatelessWidget {
@@ -73,10 +74,16 @@ class chatsScreen extends StatelessWidget {
           ),
         ],
       ),
-      floatingActionButton: CircleAvatar(
-        radius: 25,
-        backgroundColor: Color(0xFF00A884),
-        child: Image.asset("assets/images/chats.png"),
+      floatingActionButton: GestureDetector(
+        onTap: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => ContactScreen()));
+        },
+        child: CircleAvatar(
+          radius: 25,
+          backgroundColor: Color(0xFF00A884),
+          child: Image.asset("assets/images/chats.png"),
+        ),
       ),
     );
   }
