@@ -3,6 +3,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_app/screens/Home/homescreen.dart';
 import 'package:flutter_app/widgets/uihelper.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -94,8 +95,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
           ],
         ),
       ),
-      floatingActionButton:
-          Uihelper.customButton(callback: () {}, buttonname: "Next"),
+      floatingActionButton: Uihelper.customButton(
+          callback: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => HomeScreen()));
+          },
+          buttonname: "Next"),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }

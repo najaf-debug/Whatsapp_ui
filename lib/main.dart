@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/screens/splash/splashscreen.dart';
+import 'package:flutter_app/screens/Home/homescreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Color(0xFF00A884)),
           useMaterial3: false,
           fontFamily: "Regular"),
-      home: SplashScreen(),
+      home: HomeScreen(),
     );
   }
 }
