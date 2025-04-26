@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 import 'package:flutter_app/widgets/uihelper.dart';
 
@@ -41,25 +43,23 @@ class ContactScreen extends StatelessWidget {
           IconButton(onPressed: () {}, icon: Icon(Icons.more_vert_sharp))
         ],
       ),
-      body: Expanded(
-        child: ListView.builder(
-            itemBuilder: (context, index) {
-              return ListTile(
-                leading: CircleAvatar(
-                  backgroundImage:
-                      NetworkImage(contactContent[index]["img"].toString()),
-                ),
-                title: Uihelper.customText(
-                    text: contactContent[index]["name"].toString(),
-                    height: 16,
-                    fontweight: FontWeight.bold),
-                subtitle: Uihelper.customText(
-                    text: contactContent[index]["activitystatus"].toString(),
-                    height: 14),
-              );
-            },
-            itemCount: contactContent.length),
-      ),
+      body: ListView.builder(
+          itemBuilder: (context, index) {
+            return ListTile(
+              leading: CircleAvatar(
+                backgroundImage:
+                    NetworkImage(contactContent[index]["img"].toString()),
+              ),
+              title: Uihelper.customText(
+                  text: contactContent[index]["name"].toString(),
+                  height: 16,
+                  fontweight: FontWeight.bold),
+              subtitle: Uihelper.customText(
+                  text: contactContent[index]["activitystatus"].toString(),
+                  height: 14),
+            );
+          },
+          itemCount: contactContent.length),
     );
   }
 }
